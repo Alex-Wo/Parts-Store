@@ -1,5 +1,14 @@
 # Parts-Store
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+![Celery](https://img.shields.io/badge/celery-%23a9cc54.svg?style=for-the-badge&logo=celery&logoColor=ddf4a4)
+![Stripe](https://img.shields.io/badge/Stripe-5469d4?style=for-the-badge&logo=stripe&logoColor=ffffff)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 Расширенная версия интернет-магазина запасных частей для мотоциклов/автомобилей.
 
 ## Функциональность:
@@ -14,10 +23,12 @@
 
 - [Python](https://www.python.org/downloads/)
 - [Django](https://www.djangoproject.com/download/)
-- [Celery](https://pypi.org/project/celery/)
+- [Django REST framework](https://www.django-rest-framework.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/downloads/)
+- [Celery](https://pypi.org/project/celery/)
 - [Stripe](https://stripe.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ## Скриншоты:
 ![Homepage Parts-Store](https://github.com/user-attachments/assets/ee6b7e90-53c0-4614-ba37-881701374df4)
