@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-from django.conf.global_settings import MEDIA_URL
 from dotenv import find_dotenv, load_dotenv
 
 load_dotenv(find_dotenv())
@@ -17,7 +16,7 @@ DEBUG = (os.getenv('DEBUG'))
 
 # Hosts
 
-ALLOWED_HOSTS = (os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = ['*']
 
 # Email verifications
 
@@ -43,10 +42,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.vk',
     'debug_toolbar',
+    'rest_framework',
+    'rest_framework.authtoken',
 
     'products',
     'orders',
     'users',
+    'api',
 ]
 
 # Middleware
@@ -202,3 +204,13 @@ STRIPE_PUBLIC_KEY = (os.getenv('STRIPE_PUBLIC_KEY'))
 STRIPE_SECRET_KEY = (os.getenv('STRIPE_SECRET_KEY'))
 STRIPE_API_VERSION = (os.getenv('STRIPE_API_VERSION'))
 STRIPE_WEBHOOK_SECRET = (os.getenv('STRIPE_WEBHOOK_SECRET'))
+
+# REST API
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 6,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
