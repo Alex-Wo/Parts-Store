@@ -2,11 +2,13 @@ Celery==5.5.2
 Django==5.2
 Django-allauth==65.7.0
 Django-debug-toolbar==5.2.0
+Djangorestframework==3.16.0
 Eventlet==0.39.1
 Flake8==7.2.0
 Isort==6.0.1
 Pillow==11.2.1
 Psycopg2==2.9.10
+Python-dotenv==1.1.0
 Redis==6.0.0
 Requests==2.32.3
 Stripe==12.1.0

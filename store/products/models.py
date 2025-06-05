@@ -25,7 +25,7 @@ class Product(models.Model):
     description = models.TextField(verbose_name='описание')
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='цена')
     quantity = models.PositiveIntegerField(default=0, verbose_name='количество')
-    image = models.ImageField(upload_to='products_images', verbose_name='изображение')
+    image = models.ImageField(upload_to='products_images', null=True, blank=True, verbose_name='изображение')
     stripe_product_price_id = models.CharField(max_length=150, null=True, blank=True, verbose_name='stripe price id')
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE, verbose_name='категория')
 
@@ -45,7 +45,7 @@ class Product(models.Model):
     def create_stripe_product_price(self):
         stripe_product = stripe.Product.create(name=self.name)
         stripe_product_price = stripe.Price.create(
-            product=stripe_product['id'], unit_amount=round(self.price * Decimal(100)), currency='RUB')
+            product=stripe_product['id'], unit_amount=round(self.price * 100), currency='RUB')
         return stripe_product_price
 
 
